@@ -10,7 +10,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         :root {
             --primary: #1e5f8e;
             --primary-dark: #164b6e;
@@ -22,20 +21,17 @@
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --radius: 8px;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: var(--text);
             background-color: #ffffff;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
         /* Header */
         header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -47,56 +43,94 @@
             z-index: 1000;
             box-shadow: var(--shadow);
         }
-
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
-
         .logo span {
             color: var(--accent);
         }
-
         .nav-links {
             display: flex;
             gap: 2rem;
             list-style: none;
         }
-
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: 500;
             transition: opacity 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
         }
-
         .nav-links a:hover {
-            opacity: 0.8;
+            opacity: 0.9;
+            background-color: rgba(255,255,255,0.1);
         }
-
-        /* Hero */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            line-height: 1;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                z-index: 1001;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0;
+                box-shadow: var(--shadow);
+                margin: 0;
+                list-style: none;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                text-align: center;
+                width: 100%;
+            }
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+            .nav-links a:hover {
+                background-color: rgba(255,255,255,0.15);
+            }
+        }
         .hero {
             margin-top: 70px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 5rem 0;
+            color: white;padding: 5rem 0;
             text-align: center;
         }
-
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 700;
             line-height: 1.2;
         }
-
         .hero-subtitle {
             font-size: 1.25rem;
             margin-bottom: 2rem;
@@ -105,7 +139,6 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .cta-button {
             display: inline-block;
             background-color: var(--accent);
@@ -119,24 +152,19 @@
             border: none;
             cursor: pointer;
         }
-
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
-
-        /* Sections */
         section {
             padding: 4rem 0;
         }
-
         .section-title {
             text-align: center;
             font-size: 2.5rem;
             color: var(--primary-dark);
             margin-bottom: 1rem;
         }
-
         .section-subtitle {
             text-align: center;
             color: #666;
@@ -145,18 +173,15 @@
             margin-left: auto;
             margin-right: auto;
         }
-
-        /* Problem Section */
-        .problem {background-color: var(--light-bg);
+        .problem {
+            background-color: var(--light-bg);
         }
-
         .problem-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-
         .problem-card {
             background: white;
             padding: 2rem;
@@ -164,26 +189,21 @@
             box-shadow: var(--shadow);
             border-left: 4px solid var(--primary);
         }
-
         .problem-card h3 {
             color: var(--primary-dark);
             margin-bottom: 1rem;
             font-size: 1.25rem;
         }
-
-        /* Solution */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-
         .feature {
             text-align: center;
             padding: 2rem;
         }
-
         .feature-icon {
             width: 60px;
             height: 60px;
@@ -196,133 +216,98 @@
             color: white;
             font-size: 1.5rem;
         }
-
         .feature h3 {
             color: var(--primary-dark);
             margin-bottom: 0.5rem;
         }
-
-        /* Pricing */
         .pricing {
             background-color: var(--light-bg);
         }
-
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr;
+            max-width: 800px;
+            margin: 3rem auto 0;
             gap: 2rem;
-            margin-top: 3rem;
-            align-items: start;
         }
-
         .pricing-card {
             background: white;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            padding: 2rem;
-            position: relative;
-            border: 2px solid transparent;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .pricing-card.featured {
-            border-color: var(--primary);
-            transform: scale(1.05);
-        }
-
-        .pricing-card.featured::before {
-            content: "Most Popular";
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent);
-            color: var(--primary-dark);
-            padding: 0.25rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 700;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-        }
-
-        .pricing-header {
+            padding: 3rem;
             text-align: center;
+        }
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            position: relative;
+        }
+        .pricing-header {
             margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border);
         }
-
-        .pricing-tier {
-            font-size: 1.25rem;
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .pricing-amount {
-            font-size: 3rem;
+        .pricing-starting {
+            font-size: 2.5rem;
             font-weight: 800;
             color: var(--primary-dark);
-            line-height: 1;
+            margin-bottom: 0.5rem;
         }
-
-        .pricing-amount span {
-            font-size: 1rem;
-            color: #666;
+        .pricing-starting span {
+            font-size: 1.1rem;
             font-weight: 400;
-        }
-
-        .pricing-description {
-            margin: 1rem 0;
             color: #666;
-            font-size: 0.9rem;
         }
-
-        .pricing-features {
-            list-style: none;
-            margin: 1.5rem 0;
+        .pricing-note {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
         }
-
+        .pricing-features {list-style: none;
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: left;
+        }
         .pricing-features li {
-            padding: 0.75rem 0;
+            padding: 1rem 0;
             border-bottom: 1px solid var(--border);
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            line-height: 1.5;
         }
-
         .pricing-features li::before {
             content: "✓";
             color: var(--secondary);
             font-weight: bold;
             margin-right: 0.75rem;
             font-size: 1.1rem;
+            flex-shrink: 0;
         }
-
-        .pricing-cta {width: 100%;
-            margin-top: 1.5rem;
+        .pricing-cta {
+            margin-top: 2rem;
+            display: inline-block;
         }
-
-        .pricing-cta.secondary {
-            background-color: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
+        .how-it-works {
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin-top: 2rem;
+            text-align: left;
         }
-
-        .pricing-cta.secondary:hover {
-            background-color: var(--primary);
-            color: white;
+        .how-it-works h4 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
-
-        /* Compliance Section */
+        .how-it-works ol {
+            margin-left: 1.5rem;
+            color: #555;
+        }
+        .how-it-works li {
+            margin-bottom: 0.5rem;
+        }
         .compliance {
             background-color: white;
             text-align: center;
         }
-
         .badges {
             display: flex;
             justify-content: center;
@@ -330,7 +315,6 @@
             flex-wrap: wrap;
             margin-top: 2rem;
         }
-
         .badge {
             display: flex;
             flex-direction: column;
@@ -339,18 +323,14 @@
             font-weight: 600;
             color: var(--primary-dark);
         }
-
-        /* Contact */
         .contact {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
+            padding: 4rem 0;
         }
-
-        .contact .section-title,
-        .contact .section-subtitle {
+        .contact .section-title, .contact .section-subtitle {
             color: white;
         }
-
         .contact-card {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
@@ -359,20 +339,15 @@
             max-width: 600px;
             margin: 0 auto;
         }
-
         .form-group {
             margin-bottom: 1.5rem;
         }
-
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group input, .form-group textarea, .form-group select {
             width: 100%;
             padding: 0.75rem;
             border: none;
@@ -380,106 +355,99 @@
             font-family: inherit;
             font-size: 1rem;
         }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
+        .form-group input:focus, .form-group textarea:focus {
             outline: 2px solid var(--accent);
         }
-
-        /* Footer */
+        .success-message {
+            display: none;
+            background-color: rgba(46, 204, 113, 0.95);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-top: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .success-message.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        .success-message::before {
+            content: "✓ ";
+            font-weight: 800;
+            font-size: 1.3rem;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         footer {
             background-color: var(--primary-dark);
             color: white;
             text-align: center;
             padding: 2rem 0;
         }
-
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
+            margin-bottom: 1rem;flex-wrap: wrap;
         }
-
         .footer-links a {
             color: rgba(255,255,255,0.8);
             text-decoration: none;
         }
-
-        /* Mobile */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
             }
-
             .hero-subtitle {
                 font-size: 1rem;
             }
-
             .section-title {
                 font-size: 2rem;
             }
-
-            .pricing-card.featured {
-                transform: none;
+            .pricing-starting {
+                font-size: 2rem;
             }
-
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: block;
-                color: white;
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-        }
-
-        /* Success/Message styles */
-        .message {
-            display: none;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: var(--radius);
-            background-color: rgba(255,255,255,0.9);
-            color: var(--text);
-        }
-
-        .message.show {
-            display: block;
         }
     </style>
 </head>
 <body>
-
-    <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo">Appoint<span>Bridge</span> Systems</div>
-            <ul class="nav-links">
-                <li><a href="#solution">How It Works</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Get Started</a></li>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+            <ul class="nav-links" id="mobileMenu">
+                <li><a href="#problem" onclick="closeMenu()">Problem</a></li>
+                <li><a href="#solution" onclick="closeMenu()">How It Works</a></li>
+                <li><a href="#pricing" onclick="closeMenu()">Pricing</a></li>
+                <li><a href="#compliance" onclick="closeMenu()">Compliance</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Get Started</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
-        <div class="container"><h1>Stop Losing High-Value Dental Patients to Follow-Up Gaps</h1>
+        <div class="container">
+            <h1>Stop Losing High-Value Dental Patients to Follow-Up Gaps</h1>
             <p class="hero-subtitle">We convert your warm inbound leads into confirmed high-ticket appointments. HIPAA-safe. TCPA-compliant. Done-for-you appointment setting designed specifically for established dental practices.</p>
-            <a href="#pricing" class="cta-button">View Pricing & Get Started</a>
+            <a href="#contact" class="cta-button">Schedule Your Discovery Call</a>
         </div>
     </section>
 
-    <!-- Problem -->
-    <section class="problem">
+    <section class="problem" id="problem">
         <div class="container">
             <h2 class="section-title">The Silent Production Killer</h2>
             <p class="section-subtitle">You spend thousands on marketing to generate leads. But what happens between "interested" and "booked"?</p>
-            
             <div class="problem-grid">
                 <div class="problem-card">
                     <h3>❌ The Front Desk Bottleneck</h3>
@@ -497,12 +465,10 @@
         </div>
     </section>
 
-    <!-- Solution -->
     <section id="solution">
         <div class="container">
             <h2 class="section-title">Production Recovery, Not Just Appointment Setting</h2>
             <p class="section-subtitle">We bridge the gap between inquiry and confirmed appointment—so your clinical team focuses on patients, not chasing leads.</p>
-            
             <div class="features">
                 <div class="feature">
                     <div class="feature-icon">📧</div>
@@ -514,8 +480,7 @@
                     <h3>Compliant SMS Outreach</h3>
                     <p>TCPA-compliant text messaging only after documented opt-in. Professional, timely, and legally bulletproof.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">✅</div>
+                <div class="feature"><div class="feature-icon">✅</div>
                     <h3>Confirmed Bookings</h3>
                     <p>We don't just generate interest—we secure official appointments in your calendar with full documentation and confirmation.</p>
                 </div>
@@ -528,89 +493,58 @@
         </div>
     </section>
 
-    <!-- Pricing -->
     <section id="pricing" class="pricing">
         <div class="container">
-            <h2 class="section-title">Investment & Tiers</h2>
-            <p class="section-subtitle">Flat monthly retainers with performance-based booking fees. No hidden costs. No long-term contracts required.</p>
+            <h2 class="section-title">Investment</h2>
+            <p class="section-subtitle">Custom pricing scaled to your clinic's volume and production capacity. Each plan is tailored to your unique scheduling and patient flow needs.</p>
             
             <div class="pricing-grid">
-                <!-- Tier 1 -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <div class="pricing-tier">Tier 1 — Controlled Entry</div><div class="pricing-amount">$2,500<span>/month</span></div>
-                        <p class="pricing-description">For smaller volume clinics & focused onboarding</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Up to 10 officially confirmed bookings/month</li>
-                        <li>$150 per additional confirmed booking</li>
-                        <li>Email-first warm lead outreach</li>
-                        <li>SMS follow-up (TCPA compliant)</li>
-                        <li>Booking confirmation documentation</li>
-                        <li>Monthly performance reporting</li>
-                    </ul>
-                    <a href="#contact" class="cta-button pricing-cta secondary">Apply Now</a>
-                </div>
-
-                <!-- Tier 2 -->
                 <div class="pricing-card featured">
                     <div class="pricing-header">
-                        <div class="pricing-tier">Tier 2 — Growth</div>
-                        <div class="pricing-amount">$3,500<span>/month</span></div>
-                        <p class="pricing-description">For mid-volume clinics with active marketing</p>
+                        <div class="pricing-starting">$2,500<span>/month</span></div>
+                        <p class="pricing-note">Services start at $2,500/month, scaled to your clinic's volume and lead flow. Per-confirmed appointment fees vary depending on your monthly lead volume and clinic capacity.</p>
                     </div>
+                    
                     <ul class="pricing-features">
-                        <li>Up to 35 officially confirmed bookings/month</li>
-                        <li>$125 per additional confirmed booking</li>
-                        <li>Priority lead handling</li>
-                        <li>Voicemail follow-up sequences</li>
-                        <li>Weekly performance reports</li>
-                        <li>Strategy alignment calls</li>
-                        <li>Custom messaging playbook</li>
+                        <li><strong>Monthly retainer</strong> covers compliance overhead, automation infrastructure, system management, and operational risk</li>
+                        <li><strong>Per-confirmed booking fee</strong> incentivizes performance and aligns success—charged for each officially confirmed appointment</li>
+                        <li>Email-first warm lead outreach tailored to your practice's voice</li>
+                        <li>TCPA-compliant SMS follow-up (only after documented opt-in)</li>
+                        <li>Official booking confirmation and calendar integration</li>
+                        <li>Performance reporting and optimization recommendations</li>
                     </ul>
-                    <a href="#contact" class="cta-button pricing-cta">Apply Now</a>
-                </div>
 
-                <!-- Tier 3 -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <div class="pricing-tier">Tier 3 — Scale</div>
-                        <div class="pricing-amount">$5,000+<span>/month</span></div>
-                        <p class="pricing-description">For large multi-op practices & high inbound flow</p>
+                    <div class="how-it-works">
+                        <h4>How Our Pricing Works:</h4>
+                        <ol>
+                            <li>Your monthly retainer covers fixed operational costs: compliance, automation infrastructure, and management.</li>
+                            <li>Per-booking fees are charged for all officially confirmed appointments, based on your clinic's monthly volume.</li>
+                            <li>Each plan is customized to your practice size, lead flow, and high-ticket service mix.</li>
+                            <li>You only pay more when we deliver confirmed appointments.</li>
+                        </ol>
                     </div>
-                    <ul class="pricing-features">
-                        <li>Higher volume cap (custom)</li>
-                        <li>$100 per confirmed booking</li>
-                        <li>Dedicated account management</li>
-                        <li>Multi-location support</li>
-                        <li>Advanced automation customization</li>
-                        <li>White-glove onboarding</li>
-                        <li>Quarterly strategy reviews</li>
-                    </ul>
-                    <a href="#contact" class="cta-button pricing-cta secondary">Contact for Quote</a>
+
+                    <a href="#contact" class="cta-button pricing-cta">Get Your Custom Quote</a>
                 </div>
             </div>
 
-            <p style="text-align: center; margin-top: 3rem; color: #666; font-size: 0.9rem;">
-                <strong>90-day minimum agreement.</strong> Retainers cover compliance, automation infrastructure, and system management. 
-                You pay for confirmed bookings, not just leads. <a href="#contact" style="color: var(--primary);">Questions? Contact us.</a>
+            <p style="text-align: center; margin-top: 3rem; color: #666; font-size: 0.9rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <strong>90-day minimum agreement</strong> | Non-refundable activation fee | Pricing customized after discovery call based on your lead volume and clinic capacity
             </p>
         </div>
     </section>
 
-    <!-- Compliance -->
-    <section class="compliance">
+    <section class="compliance" id="compliance">
         <div class="container">
             <h2 class="section-title">Built for Dental Practices</h2>
             <p class="section-subtitle">We operate under strict compliance standards required by healthcare-adjacent businesses</p>
-            
             <div class="badges">
                 <div class="badge">
                     <div style="font-size: 3rem;">🔒</div>
                     <span>HIPAA Safe<br><small>Business Associate Agreements</small></span>
                 </div>
-                <div class="badge">
-                    <div style="font-size: 3rem;">📋</div><span>TCPA Compliant<br><small>Documented Opt-ins Only</small></span>
+                <div class="badge"><div style="font-size: 3rem;">📋</div>
+                    <span>TCPA Compliant<br><small>Documented Opt-ins Only</small></span>
                 </div>
                 <div class="badge">
                     <div style="font-size: 3rem;">🛡️</div>
@@ -620,100 +554,104 @@
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Ready to Maximize Your Production?</h2>
-            <p class="section-subtitle">Apply to work with AppointBridge Systems. We'll review your practice size, current lead flow, and fit within 48 hours.</p>
+            <p class="section-subtitle">Schedule your discovery call. We'll review your practice size, current lead flow, and customize a plan for your clinic.</p>
             
             <div class="contact-card">
-                <form id="contactForm" action="mailto:dan@example.com" method="GET" enctype="text/plain">
+                <!-- Formspree Form - submits directly to your email -->
+                <form id="contactForm" action="https://formspree.io/f/mkovreyg" method="POST">
                     <div class="form-group">
                         <label for="name">Practice / Your Name *</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required placeholder="Dr. Smith / Advanced Dental">
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required placeholder="you@yourpractice.com">
                     </div>
                     
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
                     </div>
                     
                     <div class="form-group">
-                        <label for="tier">Interested Tier</label>
-                        <select id="tier" name="tier">
-                            <option value="">Select a tier...</option>
-                            <option value="Tier 1 ($2,500/mo)">Tier 1 ($2,500/mo)</option>
-                            <option value="Tier 2 ($3,500/mo) - Featured">Tier 2 ($3,500/mo)</option>
-                            <option value="Tier 3 ($5,000+/mo)">Tier 3 ($5,000+/mo)</option>
-                            <option value="Not sure - need consultation">Not sure - need consultation</option>
+                        <label for="practicesize">Practice Size *</label>
+                        <select id="practicesize" name="practicesize" required>
+                            <option value="">Select...</option>
+                            <option value="3-5 operatories">3-5 operatories</option>
+                            <option value="6-10 operatories">6-10 operatories</option>
+                            <option value="11+ operatories">11+ operatories</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">Tell us about your practice (number of operatories, current lead volume, high-ticket services offered) *</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <label for="message">Tell us about your practice (current lead volume, high-ticket services, biggest follow-up challenge) *</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="We get about 40 warm leads per month but only convert 15 into bookings. We specialize in implants and Invisalign..."></textarea>
                     </div>
                     
-                    <button type="submit" class="cta-button" style="width: 100%;">Send Inquiry to dan@example.com</button>
+                    <!-- Hidden field to redirect back to site after submission -->
+                    <input type="hidden" name="_next" value="https://appoint-bridge.com/#contact">
                     
-                    <div id="formMessage" class="message"></div>
+                    <button type="submit" class="cta-button" style="width: 100%;">Submit Inquiry</button>
                     
-                    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.9; text-align: center;">
-                        By submitting, you agree to receive follow-up communication regarding AppointBridge services.
-                    </p>
+                    <div id="successMessage" class="success-message">Thank you! Your message has been sent. We'll be in touch within 48 hours.</div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-links">
+                <a href="#problem">The Problem</a>
                 <a href="#solution">How It Works</a>
                 <a href="#pricing">Pricing</a>
+                <a href="#compliance">Compliance</a>
                 <a href="#contact">Contact</a>
             </div>
             <p>&copy; 2026 AppointBridge Systems. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">
-                HIPAA-compliant warm lead appointment setting for established dental practices.
-            </p>
-        </div>
-    </footer>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">HIPAA-compliant warm lead appointment setting for established dental practices.</p>
+        </div></footer>
 
     <script>
-        // Simple form handlingdocument.getElementById('contactForm').addEventListener('submit', function(e) {
-            // Form will open mailto: link
-            const btn = this.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
-            btn.innerText = 'Opening your email client...';
-            btn.style.opacity = '0.8';
-            
+        // Mobile Menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+        
+        function closeMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.remove('active');
+        }
+
+        // Form Success Message
+        const form = document.getElementById('contactForm');
+        const successMsg = document.getElementById('successMessage');
+        const submitBtn = form.querySelector('button[type="submit"]');
+
+        form.addEventListener('submit', function() {
+            submitBtn.innerText = 'Sending...';
             setTimeout(() => {
-                btn.innerText = originalText;
-                btn.style.opacity = '1';
-            }, 3000);
+                successMsg.classList.add('show');
+                submitBtn.innerText = 'Submit Inquiry';
+                form.reset();
+            }, 1000);
         });
 
         // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
     </script>
-
 </body>
 </html>
