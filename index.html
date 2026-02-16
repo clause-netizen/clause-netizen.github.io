@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppointBridge Systems | Dental Appointment Setting</title>
+    <title>AppointBridge Systems | Production Recovery for Dental Practices</title>
     <style>
         * {
             margin: 0;
@@ -32,7 +32,6 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        /* Header */
         header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
@@ -122,18 +121,21 @@
         .hero {
             margin-top: 70px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;padding: 5rem 0;
+            color: white;
+            padding: 5rem 0;
             text-align: center;
         }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+        .hero h1 {font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
             line-height: 1.2;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .hero-subtitle {
             font-size: 1.25rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             opacity: 0.95;
             max-width: 700px;
             margin-left: auto;
@@ -169,9 +171,89 @@
             text-align: center;
             color: #666;
             margin-bottom: 3rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+        }
+        .icp-section {
+            background-color: #fff;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .icp-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .icp-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        .icp-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid;
+        }
+        .icp-column.good h3 {
+            color: var(--secondary);
+            border-color: var(--secondary);
+        }
+        .icp-column.bad h3 {
+            color: #888;
+            border-color: #ddd;
+        }
+        .icp-column ul {
+            list-style: none;
+        }
+        .icp-column li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.5;
+        }
+        .icp-column.good li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        .icp-column.bad li::before {
+            content: "×";
+            position: absolute;
+            left: 0;
+            color: #999;
+            font-weight: bold;
+        }
+        .math-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 3rem;
+            border-radius: var(--radius);
+            margin: 3rem auto;
+            max-width: 900px;
+            text-align: center;
+        }
+        .math-title {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .math-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+        }
+        .math-highlight {
+            background-color: var(--accent);
+            padding: 0.2rem 0.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            border-radius: 4px;
         }
         .problem {
             background-color: var(--light-bg);
@@ -182,8 +264,7 @@
             gap: 2rem;
             margin-top: 2rem;
         }
-        .problem-card {
-            background: white;
+        .problem-card {background: white;
             padding: 2rem;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
@@ -220,6 +301,69 @@
             color: var(--primary-dark);
             margin-bottom: 0.5rem;
         }
+        .authority {
+            background-color: white;
+        }
+        .authority-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .authority-card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--secondary);
+        }
+        .authority-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .authority-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .how-it-works-section {
+            background-color: var(--light-bg);
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .step {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+        .step h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .step p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
         .pricing {
             background-color: var(--light-bg);
         }
@@ -239,18 +383,17 @@
         }
         .pricing-card.featured {
             border: 2px solid var(--primary);
-            position: relative;
         }
         .pricing-header {
             margin-bottom: 2rem;
         }
-        .pricing-starting {
-            font-size: 2.5rem;
+        .pricing-range {
+            font-size: 2.2rem;
             font-weight: 800;
             color: var(--primary-dark);
             margin-bottom: 0.5rem;
         }
-        .pricing-starting span {
+        .pricing-range span {
             font-size: 1.1rem;
             font-weight: 400;
             color: #666;
@@ -259,9 +402,10 @@
             color: #666;
             font-size: 0.95rem;
             margin-bottom: 2rem;
-            padding: 0 1rem;
+            padding: 0 1rem;font-style: italic;
         }
-        .pricing-features {list-style: none;
+        .pricing-features {
+            list-style: none;
             margin: 2rem auto;
             max-width: 600px;
             text-align: left;
@@ -285,28 +429,26 @@
             margin-top: 2rem;
             display: inline-block;
         }
-        .how-it-works {
-            background-color: white;
-            padding: 2rem;
+        .guarantee-box {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
             border-radius: var(--radius);
             margin-top: 2rem;
+            border-left: 4px solid var(--accent);
             text-align: left;
         }
-        .how-it-works h4 {
+        .guarantee-box strong {
             color: var(--primary-dark);
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        .how-it-works ol {
-            margin-left: 1.5rem;
-            color: #555;
-        }
-        .how-it-works li {
-            margin-bottom: 0.5rem;
         }
         .compliance {
             background-color: white;
             text-align: center;
+        }
+        .compliance-lead {
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: #555;
         }
         .badges {
             display: flex;
@@ -380,14 +522,8 @@
             font-size: 1.3rem;
         }
         @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         footer {
             background-color: var(--primary-dark);
@@ -399,24 +535,27 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin-bottom: 1rem;flex-wrap: wrap;
-        }
-        .footer-links a {
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }.footer-links a {
             color: rgba(255,255,255,0.8);
             text-decoration: none;
         }
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.9rem;
             }
             .hero-subtitle {
                 font-size: 1rem;
             }
             .section-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
-            .pricing-starting {
-                font-size: 2rem;
+            .pricing-range {
+                font-size: 1.8rem;
+            }
+            .icp-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -427,10 +566,9 @@
             <div class="logo">Appoint<span>Bridge</span> Systems</div>
             <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu">☰</button>
             <ul class="nav-links" id="mobileMenu">
-                <li><a href="#problem" onclick="closeMenu()">Problem</a></li>
+                <li><a href="#problem" onclick="closeMenu()">The Problem</a></li>
                 <li><a href="#solution" onclick="closeMenu()">How It Works</a></li>
-                <li><a href="#pricing" onclick="closeMenu()">Pricing</a></li>
-                <li><a href="#compliance" onclick="closeMenu()">Compliance</a></li>
+                <li><a href="#pricing" onclick="closeMenu()">Investment</a></li>
                 <li><a href="#contact" onclick="closeMenu()">Get Started</a></li>
             </ul>
         </nav>
@@ -438,56 +576,118 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Stop Losing High-Value Dental Patients to Follow-Up Gaps</h1>
-            <p class="hero-subtitle">We convert your warm inbound leads into confirmed high-ticket appointments. HIPAA-safe. TCPA-compliant. Done-for-you appointment setting designed specifically for established dental practices.</p>
-            <a href="#contact" class="cta-button">Schedule Your Discovery Call</a>
+            <h1>Recover Lost Implant & Cosmetic Production From Warm Leads You Already Paid For</h1>
+            <p class="hero-subtitle">Turn warm high-ticket inquiries into confirmed $5K–$25K cases. HIPAA-safe. TCPA-compliant. Built exclusively for established general practices with 3–10 operatories.</p>
+            <a href="#contact" class="cta-button">Book Your Discovery Call</a>
         </div>
     </section>
 
-    <section class="problem" id="problem">
+    <section class="icp-section">
         <div class="container">
-            <h2 class="section-title">The Silent Production Killer</h2>
-            <p class="section-subtitle">You spend thousands on marketing to generate leads. But what happens between "interested" and "booked"?</p>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <h3>❌ The Front Desk Bottleneck</h3>
-                    <p>Your team answers phones, checks in patients, handles insurance—lead follow-up falls through the cracks. High-value implant and cosmetic leads go cold.</p>
+            <h2 class="section-title">Built For Practices Like Yours</h2>
+            <div class="icp-grid">
+                <div class="icp-column good">
+                    <h3>Who We Partner With</h3>
+                    <ul>
+                        <li>3–10 operatory established general practices</li>
+                        <li>Clinics offering implants, Invisalign, cosmetic, or complex restorative</li>
+                        <li>$1M–$5M annual production</li>
+                        <li>Existing lead flow but follow-up bottlenecks</li>
+                        <li>Doctors focused on production growth, not just hygiene volume</li>
+                        <li>Strategic high-ticket services drive meaningful revenue</li>
+                    </ul>
                 </div>
-                <div class="problem-card">
-                    <h3>❌ Chair Utilization Gaps</h3>
-                    <p>Empty operatories cost money. A single unfilled $5,000 implant slot is lost production you'll never recover. Multiply that weekly.</p>
-                </div>
-                <div class="problem-card">
-                    <h3>❌ Inconsistent Follow-Through</h3>
-                    <p>Leads from your website, social media, and referrals receive delayed or generic responses. By the time you reply, they've booked elsewhere.</p>
+                <div class="icp-column bad">
+                    <h3>Not A Fit</h3>
+                    <ul>
+                        <li>Hygiene-only or Medicaid-heavy practices</li>
+                        <li>Startups under 2 operatories</li>
+                        <li>Clinics without high-ticket service focus</li>
+                        <li>Practices not actively generating warm leads</li>
+                        <li>General dentistry without production recovery goals</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="solution">
+    <div class="container">
+        <div class="math-section">
+            <div class="math-title">The Silent Production Killer</div>
+            <p class="math-text">
+                If your practice generates <span class="math-highlight">20 warm implant/cosmetic inquiries monthly</span> and converts only 30%, that's <span class="math-highlight">14 warm leads going cold every month</span>. If just 3 of those were $6,000 cases, that's <span class="math-highlight">$18,000 in lost monthly production</span> — over <span class="math-highlight">$200,000 annually</span> in recoverable revenue you already paid to generate.
+            </p>
+        </div>
+    </div>
+
+    <section class="problem" id="problem">
         <div class="container">
-            <h2 class="section-title">Production Recovery, Not Just Appointment Setting</h2>
-            <p class="section-subtitle">We bridge the gap between inquiry and confirmed appointment—so your clinical team focuses on patients, not chasing leads.</p>
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">📧</div>
-                    <h3>Warm Lead Follow-Up</h3>
-                    <p>Email-first professional outreach tailored to your practice voice. We nurture leads who showed interest but haven't booked yet.</p>
+            <h2 class="section-title">Why Your Best Leads Go Cold</h2><p class="section-subtitle">You spend thousands on marketing to generate interest. But what happens between "interested" and your chair?</p>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>The Front Desk Bottleneck</h3>
+                    <p>Your team answers phones, checks in patients, handles insurance—high-value implant consultations fall through the cracks while they're putting out fires. Warm leads don't wait.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">📱</div>
-                    <h3>Compliant SMS Outreach</h3>
-                    <p>TCPA-compliant text messaging only after documented opt-in. Professional, timely, and legally bulletproof.</p>
+                <div class="problem-card">
+                    <h3>Empty Chair Syndrome</h3>
+                    <p>An unfilled $5,000–$25,000 implant slot isn't just empty space—it's lost production you'll never recover. Meanwhile, competitors with structured follow-up convert those same leads.</p>
                 </div>
-                <div class="feature"><div class="feature-icon">✅</div>
-                    <h3>Confirmed Bookings</h3>
-                    <p>We don't just generate interest—we secure official appointments in your calendar with full documentation and confirmation.</p>
+                <div class="problem-card">
+                    <h3>The 24-Hour Rule</h3>
+                    <p>Warm inquiries from your website, social, and referrals receive delayed responses. By the time your team follows up 3 days later, they've already booked with the clinic that responded in 2 hours.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🔒</div>
-                    <h3>HIPAA-Safe Workflow</h3>
-                    <p>Minimal PHI exposure. Encrypted systems. Business Associate Agreements. Your patient's privacy is protected.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="authority">
+        <div class="container">
+            <h2 class="section-title">Why AppointBridge Exists</h2>
+            <p class="section-subtitle">Not a marketing agency. Not a call center. Infrastructure for production recovery.</p>
+            <div class="authority-grid">
+                <div class="authority-card">
+                    <h3>The Marketing Gap</h3>
+                    <p>Digital agencies generate leads. They don't convert them. Your front desk follows up inconsistently. We bridge the gap between "interested" and "confirmed" with professional consistency.</p>
+                </div>
+                <div class="authority-card">
+                    <h3>Compliance Complexity</h3>
+                    <p>HIPAA-safe workflows aren't optional. TCPA-compliant SMS requires documented opt-ins. We built our systems specifically for healthcare-adjacent businesses—not generic follow-up tools.</p>
+                </div>
+                <div class="authority-card">
+                    <h3>Why Generic VAs Fail</h3>
+                    <p>A $12/hour virtual assistant can't understand production value, treatment complexity, or patient psychology. We specialize in warm lead conversion for high-ticket dental—nothing else.</p>
+                </div>
+                <div class="authority-card">
+                    <h3>The Production-First Model</h3>
+                    <p>We're not appointment setters. We're production recovery specialists. Every confirmed booking is tracked, verified, and aligned with your chair utilization goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works-section" id="solution">
+        <div class="container">
+            <h2 class="section-title">How Production Recovery Works</h2>
+            <p class="section-subtitle">A structured 4-week implementation for established practices ready to maximize yield.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We analyze your current lead volume, high-ticket service mix, and follow-up bottlenecks to design your custom recovery system.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>System Setup</h3>
+                    <p>HIPAA-safe infrastructure, compliance alignment, and voice-matched messaging protocols tailored to your practice identity.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Recovery Launch</h3><p>Immediate professional follow-up for warm implant, cosmetic, and complex restorative inquiries—before they call competitors.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Optimize & Scale</h3>
+                    <p>Weekly performance reviews, conversion tracking, and system refinement to maximize your confirmed production value.</p>
                 </div>
             </div>
         </div>
@@ -496,54 +696,45 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <h2 class="section-title">Investment</h2>
-            <p class="section-subtitle">Custom pricing scaled to your clinic's volume and production capacity. Each plan is tailored to your unique scheduling and patient flow needs.</p>
-            
+            <p class="section-subtitle">Premium production recovery infrastructure for established practices serious about maximizing yield.</p>
             <div class="pricing-grid">
                 <div class="pricing-card featured">
                     <div class="pricing-header">
-                        <div class="pricing-starting">$2,500<span>/month</span></div>
-                        <p class="pricing-note">Services start at $2,500/month, scaled to your clinic's volume and lead flow. Per-confirmed appointment fees vary depending on your monthly lead volume and clinic capacity.</p>
+                        <div class="pricing-range">$2,500–$5,000+<span>/month</span></div>
+                        <p class="pricing-note">Most established implant and cosmetic practices invest between $2,500–$5,000 monthly plus performance fees per confirmed appointment</p>
                     </div>
-                    
                     <ul class="pricing-features">
-                        <li><strong>Monthly retainer</strong> covers compliance overhead, automation infrastructure, system management, and operational risk</li>
-                        <li><strong>Per-confirmed booking fee</strong> incentivizes performance and aligns success—charged for each officially confirmed appointment</li>
-                        <li>Email-first warm lead outreach tailored to your practice's voice</li>
-                        <li>TCPA-compliant SMS follow-up (only after documented opt-in)</li>
+                        <li><strong>Monthly retainer</strong> covers infrastructure, compliance, system management, and specialist labor</li>
+                        <li><strong>Per-confirmed booking fee</strong> incentivizes performance—charged only for officially confirmed high-ticket appointments</li>
+                        <li><strong>90-day minimum agreement</strong> with structured onboarding and workflow optimization</li>
+                        <li>Immediate email-first follow-up for warm implant and cosmetic inquiries</li>
+                        <li>TCPA-compliant SMS sequences (documented opt-ins only)</li>
                         <li>Official booking confirmation and calendar integration</li>
-                        <li>Performance reporting and optimization recommendations</li>
+                        <li>Weekly performance reporting and conversion analysis</li>
                     </ul>
-
-                    <div class="how-it-works">
-                        <h4>How Our Pricing Works:</h4>
-                        <ol>
-                            <li>Your monthly retainer covers fixed operational costs: compliance, automation infrastructure, and management.</li>
-                            <li>Per-booking fees are charged for all officially confirmed appointments, based on your clinic's monthly volume.</li>
-                            <li>Each plan is customized to your practice size, lead flow, and high-ticket service mix.</li>
-                            <li>You only pay more when we deliver confirmed appointments.</li>
-                        </ol>
+                    <div class="guarantee-box">
+                        <strong>What "Confirmed" Means:</strong> Performance fees apply to officially confirmed appointments only—not attendance. This ensures alignment without unrealistic guarantees about patient behavior you don't control.
                     </div>
-
                     <a href="#contact" class="cta-button pricing-cta">Get Your Custom Quote</a>
                 </div>
             </div>
-
             <p style="text-align: center; margin-top: 3rem; color: #666; font-size: 0.9rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <strong>90-day minimum agreement</strong> | Non-refundable activation fee | Pricing customized after discovery call based on your lead volume and clinic capacity
+                Custom pricing based on your monthly lead volume, high-ticket service mix, and practice capacity. <a href="#contact" style="color: var(--primary);">Schedule a discovery call</a> to determine your tier.
             </p>
         </div>
     </section>
 
-    <section class="compliance" id="compliance">
+    <section class="compliance">
         <div class="container">
-            <h2 class="section-title">Built for Dental Practices</h2>
-            <p class="section-subtitle">We operate under strict compliance standards required by healthcare-adjacent businesses</p>
+            <h2 class="section-title">Built for Healthcare. Not Marketing Fluff.</h2>
+            <p class="compliance-lead">HIPAA-safe systems. Documented opt-ins. Structured workflows. Your compliance risk is eliminated before we touch a single lead.</p>
             <div class="badges">
                 <div class="badge">
                     <div style="font-size: 3rem;">🔒</div>
                     <span>HIPAA Safe<br><small>Business Associate Agreements</small></span>
                 </div>
-                <div class="badge"><div style="font-size: 3rem;">📋</div>
+                <div class="badge">
+                    <div style="font-size: 3rem;">📋</div>
                     <span>TCPA Compliant<br><small>Documented Opt-ins Only</small></span>
                 </div>
                 <div class="badge">
@@ -551,32 +742,26 @@
                     <span>Encrypted Systems<br><small>Secure Data Handling</small></span>
                 </div>
             </div>
-        </div>
-    </section>
+        </div></section>
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Ready to Maximize Your Production?</h2>
-            <p class="section-subtitle">Schedule your discovery call. We'll review your practice size, current lead flow, and customize a plan for your clinic.</p>
-            
+            <h2 class="section-title">Ready to Recover Lost Production?</h2>
+            <p class="section-subtitle">Book your discovery call. We'll review your practice size, current lead flow, and customize a recovery plan for your clinic.</p>
             <div class="contact-card">
-                <!-- Formspree Form - submits directly to your email -->
                 <form id="contactForm" action="https://formspree.io/f/mkovreyg" method="POST">
                     <div class="form-group">
                         <label for="name">Practice / Your Name *</label>
                         <input type="text" id="name" name="name" required placeholder="Dr. Smith / Advanced Dental">
                     </div>
-                    
                     <div class="form-group">
                         <label for="email">Email Address *</label>
                         <input type="email" id="email" name="email" required placeholder="you@yourpractice.com">
                     </div>
-                    
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
                         <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
                     </div>
-                    
                     <div class="form-group">
                         <label for="practicesize">Practice Size *</label>
                         <select id="practicesize" name="practicesize" required>
@@ -586,18 +771,13 @@
                             <option value="11+ operatories">11+ operatories</option>
                         </select>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="message">Tell us about your practice (current lead volume, high-ticket services, biggest follow-up challenge) *</label>
+                        <label for="message">Tell us about your practice (monthly warm lead volume, high-ticket services offered, biggest follow-up challenge) *</label>
                         <textarea id="message" name="message" rows="4" required placeholder="We get about 40 warm leads per month but only convert 15 into bookings. We specialize in implants and Invisalign..."></textarea>
                     </div>
-                    
-                    <!-- Hidden field to redirect back to site after submission -->
                     <input type="hidden" name="_next" value="https://appoint-bridge.com/#contact">
-                    
                     <button type="submit" class="cta-button" style="width: 100%;">Submit Inquiry</button>
-                    
-                    <div id="successMessage" class="success-message">Thank you! Your message has been sent. We'll be in touch within 48 hours.</div>
+                    <div id="successMessage" class="success-message">Thank you! Your message has been sent. We'll be in touch within 48 hours to discuss your production recovery plan.</div>
                 </form>
             </div>
         </div>
@@ -608,32 +788,26 @@
             <div class="footer-links">
                 <a href="#problem">The Problem</a>
                 <a href="#solution">How It Works</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#compliance">Compliance</a>
-                <a href="#contact">Contact</a>
+                <a href="#pricing">Investment</a>
+                <a href="#contact">Get Started</a>
             </div>
             <p>&copy; 2026 AppointBridge Systems. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">HIPAA-compliant warm lead appointment setting for established dental practices.</p>
-        </div></footer>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">Production recovery infrastructure for established dental practices.</p>
+        </div>
+    </footer>
 
     <script>
-        // Mobile Menu
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('active');
         }
-        
         function closeMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.remove('active');
         }
-
-        // Form Success Message
         const form = document.getElementById('contactForm');
         const successMsg = document.getElementById('successMessage');
-        const submitBtn = form.querySelector('button[type="submit"]');
-
-        form.addEventListener('submit', function() {
+        const submitBtn = form.querySelector('button[type="submit"]');form.addEventListener('submit', function() {
             submitBtn.innerText = 'Sending...';
             setTimeout(() => {
                 successMsg.classList.add('show');
@@ -641,8 +815,6 @@
                 form.reset();
             }, 1000);
         });
-
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', function(e) {
                 e.preventDefault();
