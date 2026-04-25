@@ -267,38 +267,37 @@ footer a:hover{color:#fff}
 <nav>
   <a href="#" class="logo">
     <div class="logo-mark">
-      <!-- AB-in-shield crest. Pentagon shield with 3-layer 3D depth.
-           AB monogram: A in left half (gold apex dot), B in right half
-           (gold on lower arc). Original geometry — trademarkable. -->
-      <svg viewBox="0 0 56 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- AB-in-shield. viewBox 64×58 → renders ~44×40px (wider than tall, no vertical stretch).
+           3-layer depth: shadow +3/+4, mid +1.5/+2, front face. -->
+      <svg viewBox="0 0 64 58" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="sg" x1="6" y1="4" x2="50" y2="62" gradientUnits="userSpaceOnUse">
+          <linearGradient id="sg" x1="3" y1="3" x2="61" y2="57" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stop-color="#17d4c0"/>
             <stop offset="100%" stop-color="#0a8a7c"/>
           </linearGradient>
         </defs>
         <!-- Deep shadow -->
-        <path d="M28 4 L50 14 L50 36 Q50 54 28 62 Q6 54 6 36 L6 14 Z" fill="#021e1b" transform="translate(3,4)"/>
+        <path d="M32 3 L61 13 L61 35 Q61 50 32 57 Q3 50 3 35 L3 13 Z" fill="#021e1b" transform="translate(3,4)"/>
         <!-- Mid extrusion -->
-        <path d="M28 4 L50 14 L50 36 Q50 54 28 62 Q6 54 6 36 L6 14 Z" fill="#054d46" transform="translate(1.5,2)"/>
+        <path d="M32 3 L61 13 L61 35 Q61 50 32 57 Q3 50 3 35 L3 13 Z" fill="#054d46" transform="translate(1.5,2)"/>
         <!-- Front face -->
-        <path d="M28 4 L50 14 L50 36 Q50 54 28 62 Q6 54 6 36 L6 14 Z" fill="url(#sg)"/>
+        <path d="M32 3 L61 13 L61 35 Q61 50 32 57 Q3 50 3 35 L3 13 Z" fill="url(#sg)"/>
         <!-- Inner crest border -->
-        <path d="M28 9 L46 18 L46 36 Q46 51 28 57 Q10 51 10 36 L10 18 Z" stroke="rgba(255,255,255,0.16)" stroke-width="1" fill="none"/>
+        <path d="M32 8 L57 17 L57 35 Q57 48 32 53 Q7 48 7 35 L7 17 Z" stroke="rgba(255,255,255,0.16)" stroke-width="1" fill="none"/>
         <!-- Top highlight wash -->
-        <path d="M28 4 L50 14 L50 20 Q28 8 6 20 L6 14 Z" fill="rgba(255,255,255,0.09)"/>
+        <path d="M32 3 L61 13 L61 20 Q32 7 3 20 L3 13 Z" fill="rgba(255,255,255,0.09)"/>
         <!-- A: two legs + crossbar -->
-        <polyline points="14,47 22,15 30,47" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        <line x1="17" y1="37" x2="27" y2="37" stroke="white" stroke-width="2.8" stroke-linecap="round"/>
+        <polyline points="15,48 27,15 37,48" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <line x1="19" y1="38" x2="33" y2="38" stroke="white" stroke-width="2.8" stroke-linecap="round"/>
         <!-- Gold apex dot on A -->
-        <circle cx="22" cy="15" r="3.6" fill="#debb6a"/>
-        <circle cx="22" cy="15" r="1.8" fill="#f5e9cc"/>
+        <circle cx="27" cy="15" r="3.8" fill="#debb6a"/>
+        <circle cx="27" cy="15" r="1.9" fill="#f5e9cc"/>
         <!-- B: spine -->
-        <line x1="33" y1="15" x2="33" y2="47" stroke="white" stroke-width="3.2" stroke-linecap="round"/>
+        <line x1="41" y1="15" x2="41" y2="48" stroke="white" stroke-width="3.2" stroke-linecap="round"/>
         <!-- B top arc — white -->
-        <path d="M33 15 Q43 15 43 24 Q43 29 33 29" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+        <path d="M41 15 Q52 15 52 24 Q52 30 41 30" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none"/>
         <!-- B bottom arc — gold -->
-        <path d="M33 29 Q44 29 44 37 Q44 47 33 47" stroke="#debb6a" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+        <path d="M41 30 Q53 30 53 38 Q53 48 41 48" stroke="#debb6a" stroke-width="2.8" stroke-linecap="round" fill="none"/>
       </svg>
     </div>
     <div>
