@@ -48,8 +48,8 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 2
 
 /* ── LOGO ── */
 .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
-.logo-mark{width:48px;height:48px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.logo-mark svg{width:48px;height:48px}
+.logo-mark{width:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.logo-mark svg{width:44px;height:auto}
 .logo-name{font-family:'Fraunces',serif;font-size:1.22rem;font-weight:800;color:#fff;letter-spacing:-0.4px;line-height:1}
 .logo-name span{color:var(--gold-light)}
 .logo-systems{font-size:0.58rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.42);margin-top:3px}
@@ -62,7 +62,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 2
 .menu-toggle{display:none;background:none;border:none;color:white;font-size:1.5rem;cursor:pointer;padding:4px}
 
 /* ── HERO ── */
-.hero{margin-top:0;background:var(--navy);padding:96px 0 80px;position:relative;overflow:hidden}
+.hero{margin-top:70px;background:var(--navy);padding:96px 0 80px;position:relative;overflow:hidden}
 .hero-orb-1{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(13,168,152,0.14) 0%,transparent 70%);top:-100px;right:-100px;pointer-events:none}
 .hero-orb-2{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(200,161,74,0.09) 0%,transparent 70%);bottom:-120px;left:-80px;pointer-events:none}
 .hero-orb-3{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(13,168,152,0.08) 0%,transparent 70%);bottom:40px;right:20%;pointer-events:none;animation:pulse 6s ease-in-out infinite}
@@ -258,19 +258,6 @@ footer a:hover{color:#fff}
   .badges-row{grid-template-columns:1fr 1fr}
 }
 
-/* ── LOGO PICKER ── */
-.logo-picker{margin-top:70px;background:#e8f0f9;padding:44px 0 48px;border-bottom:3px dashed #b0c4de}
-.picker-title{text-align:center;font-size:1.1rem;font-weight:800;color:var(--navy);margin-bottom:6px}
-.picker-sub{text-align:center;font-size:0.85rem;color:var(--gray);margin-bottom:36px}
-.picker-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;max-width:900px;margin:0 auto}
-.picker-card{background:#fff;border-radius:18px;padding:28px 16px 22px;text-align:center;box-shadow:0 4px 20px rgba(11,34,64,0.1);border:3px solid transparent;cursor:default;transition:all .22s}
-.picker-card:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:0 10px 30px rgba(11,34,64,0.15)}
-.picker-svg-wrap{width:84px;height:84px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center}
-.picker-svg-wrap svg{width:84px;height:84px}
-.picker-num{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:3px}
-.picker-desc{font-size:0.78rem;color:var(--gray);font-weight:500}
-@media(max-width:760px){.picker-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:480px){.picker-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -280,50 +267,38 @@ footer a:hover{color:#fff}
 <nav>
   <a href="#" class="logo">
     <div class="logo-mark">
-      <!--
-        AppointBridge mark — 3-layer coin/tile gives depth.
-        A wide, flat arch (2.5:1 width:height) with two squat pillars
-        and a gold apex dot. The three stacked rects offset by 3px each
-        create the 3D lift without any 3D transform.
-        Unique geometry; no resemblance to any existing trademark.
-      -->
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- AB-in-shield crest. Pentagon shield with 3-layer 3D depth.
+           AB monogram: A in left half (gold apex dot), B in right half
+           (gold on lower arc). Original geometry — trademarkable. -->
+      <svg viewBox="0 0 56 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="face" x1="3" y1="5" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+          <linearGradient id="sg" x1="6" y1="4" x2="50" y2="62" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stop-color="#17d4c0"/>
             <stop offset="100%" stop-color="#0a8a7c"/>
           </linearGradient>
-          <linearGradient id="edgeL" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#0da898"/>
-            <stop offset="100%" stop-color="#076b61"/>
-          </linearGradient>
         </defs>
-        <!-- Layer 3: deepest shadow -->
-        <rect x="10" y="14" width="38" height="34" rx="9" fill="#043d38"/>
-        <!-- Layer 2: mid extrusion (visible on bottom & right edges) -->
-        <rect x="7" y="10" width="38" height="34" rx="9" fill="#076b61"/>
-        <!-- Layer 1: front face -->
-        <rect x="3" y="5" width="38" height="34" rx="9" fill="url(#face)"/>
-        <!-- Subtle top-left highlight on face -->
-        <rect x="3" y="5" width="38" height="34" rx="9" fill="url(#hl)" opacity="0.12"/>
-        <defs>
-          <linearGradient id="hl" x1="3" y1="5" x2="3" y2="39" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="white"/>
-            <stop offset="60%" stop-color="white" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <!-- Bridge icon on front face -->
-        <!-- Road deck -->
-        <line x1="7" y1="37" x2="41" y2="37" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-        <!-- Left pillar -->
-        <rect x="9" y="27" width="6" height="10" rx="2" fill="white" opacity="0.9"/>
-        <!-- Right pillar -->
-        <rect x="29" y="27" width="6" height="10" rx="2" fill="white" opacity="0.9"/>
-        <!-- Wide flat arch (width 26, rise 10 → ratio 2.6:1, clearly a bridge arch) -->
-        <path d="M12 27 Q22 17 32 27" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
-        <!-- Gold apex dot — the appointment being made -->
-        <circle cx="22" cy="17" r="4" fill="#debb6a"/>
-        <circle cx="22" cy="17" r="2" fill="#f5e9cc"/>
+        <!-- Deep shadow -->
+        <path d="M28 4 L50 14 L50 36 Q50 54 28 62 Q6 54 6 36 L6 14 Z" fill="#021e1b" transform="translate(3,4)"/>
+        <!-- Mid extrusion -->
+        <path d="M28 4 L50 14 L50 36 Q50 54 28 62 Q6 54 6 36 L6 14 Z" fill="#054d46" transform="translate(1.5,2)"/>
+        <!-- Front face -->
+        <path d="M28 4 L50 14 L50 36 Q50 54 28 62 Q6 54 6 36 L6 14 Z" fill="url(#sg)"/>
+        <!-- Inner crest border -->
+        <path d="M28 9 L46 18 L46 36 Q46 51 28 57 Q10 51 10 36 L10 18 Z" stroke="rgba(255,255,255,0.16)" stroke-width="1" fill="none"/>
+        <!-- Top highlight wash -->
+        <path d="M28 4 L50 14 L50 20 Q28 8 6 20 L6 14 Z" fill="rgba(255,255,255,0.09)"/>
+        <!-- A: two legs + crossbar -->
+        <polyline points="14,47 22,15 30,47" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <line x1="17" y1="37" x2="27" y2="37" stroke="white" stroke-width="2.8" stroke-linecap="round"/>
+        <!-- Gold apex dot on A -->
+        <circle cx="22" cy="15" r="3.6" fill="#debb6a"/>
+        <circle cx="22" cy="15" r="1.8" fill="#f5e9cc"/>
+        <!-- B: spine -->
+        <line x1="33" y1="15" x2="33" y2="47" stroke="white" stroke-width="3.2" stroke-linecap="round"/>
+        <!-- B top arc — white -->
+        <path d="M33 15 Q43 15 43 24 Q43 29 33 29" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+        <!-- B bottom arc — gold -->
+        <path d="M33 29 Q44 29 44 37 Q44 47 33 47" stroke="#debb6a" stroke-width="2.8" stroke-linecap="round" fill="none"/>
       </svg>
     </div>
     <div>
@@ -342,12 +317,8 @@ footer a:hover{color:#fff}
 </nav>
 </header>
 
-<!-- LOGO PICKER -->
-<section class="logo-picker">
-<div class="container">
-  <div class="picker-title">Daniel — Choose Your Logo</div>
-  <div class="picker-sub">Pick the one you want and tell me the number. It will replace the current mark sitewide.</div>
-  <div class="picker-grid">
+<!-- LOGO PICKER REMOVED -->
+<div style="display:none"><div>
 
     <!-- OPTION 1: AB MONOGRAM -->
     <div class="picker-card">
@@ -507,7 +478,7 @@ footer a:hover{color:#fff}
 
   </div>
 </div>
-</section>
+</div>
 
 <!-- HERO -->
 <section class="hero">
