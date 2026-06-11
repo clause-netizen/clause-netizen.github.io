@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AppointBridge | Dental Lead Conversion Infrastructure</title>
-<meta name="description" content="Convert warm implant, cosmetic, and Invisalign inquiries into confirmed appointments. HIPAA-safe. TCPA-compliant. Built for established dental practices.">
+<meta name="description" content="Convert warm implant, cosmetic, and Invisalign inquiries into confirmed appointments. HIPAA-safe. TCPA-compliant. Built for independent dental practices.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
 <style>
@@ -308,176 +308,13 @@ footer a:hover{color:#fff}
   <button class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
   <ul class="nav-links" id="nav">
     <li><a href="#problem" onclick="this.closest('ul').classList.remove('open')">Problem</a></li>
-    <li><a href="#proof" onclick="this.closest('ul').classList.remove('open')">Results</a></li>
+    <li><a href="#proof" onclick="this.closest('ul').classList.remove('open')">Pilot</a></li>
     <li><a href="#solution" onclick="this.closest('ul').classList.remove('open')">How It Works</a></li>
     <li><a href="#pricing" onclick="this.closest('ul').classList.remove('open')">Pricing</a></li>
     <li><a href="#contact" class="nav-cta" onclick="this.closest('ul').classList.remove('open')">Get Started →</a></li>
   </ul>
 </nav>
 </header>
-
-<!-- LOGO PICKER REMOVED -->
-<div style="display:none"><div>
-
-    <!-- OPTION 1: AB MONOGRAM -->
-    <div class="picker-card">
-      <div class="picker-svg-wrap">
-        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g1" x1="3" y1="4" x2="47" y2="48" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#17d4c0"/><stop offset="100%" stop-color="#0a8a7c"/>
-            </linearGradient>
-          </defs>
-          <!-- 3D layers -->
-          <rect x="8" y="10" width="44" height="44" rx="11" fill="#032e2a"/>
-          <rect x="5" y="7"  width="44" height="44" rx="11" fill="#065c53"/>
-          <rect x="3" y="4"  width="44" height="44" rx="11" fill="url(#g1)"/>
-          <!-- Top highlight -->
-          <rect x="3" y="4" width="44" height="20" rx="11" fill="white" opacity="0.07"/>
-          <!-- Letter A -->
-          <polyline points="10,43 21,13 32,43" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <line x1="13.5" y1="33" x2="28.5" y2="33" stroke="white" stroke-width="2.8" stroke-linecap="round"/>
-          <!-- Letter B spine -->
-          <line x1="35" y1="13" x2="35" y2="43" stroke="white" stroke-width="3.2" stroke-linecap="round"/>
-          <!-- B top bump -->
-          <path d="M35 13 Q46 13 46 22 Q46 28 35 28" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-          <!-- B bottom bump — gold -->
-          <path d="M35 28 Q48 28 48 35 Q48 43 35 43" stroke="#debb6a" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-        </svg>
-      </div>
-      <div class="picker-num">Option 1</div>
-      <div class="picker-desc">AB Monogram</div>
-    </div>
-
-    <!-- OPTION 2: TOOTH -->
-    <div class="picker-card">
-      <div class="picker-svg-wrap">
-        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g2" x1="3" y1="4" x2="47" y2="48" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#17d4c0"/><stop offset="100%" stop-color="#0a8a7c"/>
-            </linearGradient>
-          </defs>
-          <rect x="8" y="10" width="44" height="44" rx="11" fill="#032e2a"/>
-          <rect x="5" y="7"  width="44" height="44" rx="11" fill="#065c53"/>
-          <rect x="3" y="4"  width="44" height="44" rx="11" fill="url(#g2)"/>
-          <rect x="3" y="4" width="44" height="20" rx="11" fill="white" opacity="0.07"/>
-          <!-- Tooth crown (dome with double cusp top) -->
-          <path d="M14 30 C14 22 18 11 22 11 C24 9 24 13 28 15 C32 13 32 9 34 11 C38 11 42 22 42 30 C42 36 38 40 28 40 C18 40 14 36 14 30 Z" fill="white" opacity="0.9"/>
-          <!-- Left root -->
-          <rect x="20" y="40" width="5" height="8" rx="2.5" fill="white" opacity="0.85"/>
-          <!-- Right root -->
-          <rect x="31" y="40" width="5" height="8" rx="2.5" fill="white" opacity="0.85"/>
-          <!-- Gold arc across crown — the bridge/appointment connection -->
-          <path d="M17 25 Q28 15 39 25" stroke="#debb6a" stroke-width="2.8" fill="none" stroke-linecap="round"/>
-          <!-- Gold dot at arc apex -->
-          <circle cx="28" cy="17" r="3" fill="#debb6a"/>
-        </svg>
-      </div>
-      <div class="picker-num">Option 2</div>
-      <div class="picker-desc">Dental Tooth</div>
-    </div>
-
-    <!-- OPTION 3: CALENDAR + ARC -->
-    <div class="picker-card">
-      <div class="picker-svg-wrap">
-        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g3" x1="3" y1="4" x2="47" y2="48" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#17d4c0"/><stop offset="100%" stop-color="#0a8a7c"/>
-            </linearGradient>
-          </defs>
-          <rect x="8" y="10" width="44" height="44" rx="11" fill="#032e2a"/>
-          <rect x="5" y="7"  width="44" height="44" rx="11" fill="#065c53"/>
-          <rect x="3" y="4"  width="44" height="44" rx="11" fill="url(#g3)"/>
-          <rect x="3" y="4" width="44" height="20" rx="11" fill="white" opacity="0.07"/>
-          <!-- Calendar body -->
-          <rect x="10" y="16" width="36" height="29" rx="4" fill="rgba(255,255,255,0.13)" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
-          <!-- Calendar header bar -->
-          <rect x="10" y="16" width="36" height="8" rx="3" fill="rgba(255,255,255,0.25)"/>
-          <!-- Binding pegs -->
-          <line x1="20" y1="13" x2="20" y2="20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="36" y1="13" x2="36" y2="20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-          <!-- Grid row 1 -->
-          <rect x="12" y="27" width="7" height="5" rx="1.5" fill="rgba(255,255,255,0.35)"/>
-          <rect x="22" y="27" width="7" height="5" rx="1.5" fill="rgba(255,255,255,0.35)"/>
-          <rect x="32" y="27" width="7" height="5" rx="1.5" fill="rgba(255,255,255,0.35)"/>
-          <!-- Grid row 2 -->
-          <rect x="12" y="35" width="7" height="5" rx="1.5" fill="rgba(255,255,255,0.35)"/>
-          <!-- Gold appointment square -->
-          <rect x="22" y="35" width="7" height="5" rx="1.5" fill="#debb6a"/>
-          <circle cx="25.5" cy="37.5" r="1.8" fill="white"/>
-          <rect x="32" y="35" width="7" height="5" rx="1.5" fill="rgba(255,255,255,0.35)"/>
-          <!-- Gold arc over calendar = the bridge -->
-          <path d="M12 27 Q28 10 44 27" stroke="#debb6a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="picker-num">Option 3</div>
-      <div class="picker-desc">Calendar + Arc</div>
-    </div>
-
-    <!-- OPTION 4: SHIELD / CREST -->
-    <div class="picker-card">
-      <div class="picker-svg-wrap">
-        <svg viewBox="0 0 56 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g4" x1="5" y1="3" x2="51" y2="57" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#17d4c0"/><stop offset="100%" stop-color="#0a8a7c"/>
-            </linearGradient>
-          </defs>
-          <!-- Shield shadow -->
-          <path d="M28 6 L52 17 L52 37 Q52 53 28 59 Q4 53 4 37 L4 17 Z" fill="#032e2a" transform="translate(2,3)"/>
-          <!-- Shield mid -->
-          <path d="M28 6 L52 17 L52 37 Q52 53 28 59 Q4 53 4 37 L4 17 Z" fill="#065c53" transform="translate(1,1.5)"/>
-          <!-- Shield front face -->
-          <path d="M28 4 L52 15 L52 36 Q52 52 28 58 Q4 52 4 36 L4 15 Z" fill="url(#g4)"/>
-          <!-- Inner shield highlight ring -->
-          <path d="M28 9 L47 18 L47 35 Q47 48 28 53 Q9 48 9 35 L9 18 Z" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
-          <!-- Inner A-shape (arch / letter A) -->
-          <polyline points="18,44 28,20 38,44" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <line x1="21" y1="36" x2="35" y2="36" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-          <!-- Gold apex dot -->
-          <circle cx="28" cy="20" r="4" fill="#debb6a"/>
-          <circle cx="28" cy="20" r="2" fill="#f5e9cc"/>
-        </svg>
-      </div>
-      <div class="picker-num">Option 4</div>
-      <div class="picker-desc">Shield / Crest</div>
-    </div>
-
-    <!-- OPTION 5: CONNECTION NODES -->
-    <div class="picker-card">
-      <div class="picker-svg-wrap">
-        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g5" x1="3" y1="4" x2="47" y2="48" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#17d4c0"/><stop offset="100%" stop-color="#0a8a7c"/>
-            </linearGradient>
-          </defs>
-          <rect x="8" y="10" width="44" height="44" rx="11" fill="#032e2a"/>
-          <rect x="5" y="7"  width="44" height="44" rx="11" fill="#065c53"/>
-          <rect x="3" y="4"  width="44" height="44" rx="11" fill="url(#g5)"/>
-          <rect x="3" y="4" width="44" height="20" rx="11" fill="white" opacity="0.07"/>
-          <!-- Left node — clinic/lead -->
-          <circle cx="16" cy="34" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
-          <circle cx="16" cy="34" r="4" fill="white" opacity="0.85"/>
-          <!-- Right node — patient/appointment -->
-          <circle cx="40" cy="34" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
-          <circle cx="40" cy="34" r="4" fill="white" opacity="0.85"/>
-          <!-- Connecting arc — the bridge -->
-          <path d="M16 34 Q28 12 40 34" stroke="rgba(255,255,255,0.6)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <!-- Gold midpoint — the appointment being made -->
-          <circle cx="28" cy="16" r="6" fill="#debb6a"/>
-          <circle cx="28" cy="16" r="3" fill="#f5e9cc"/>
-        </svg>
-      </div>
-      <div class="picker-num">Option 5</div>
-      <div class="picker-desc">Connection Nodes</div>
-    </div>
-
-  </div>
-</div>
-</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -488,30 +325,30 @@ footer a:hover{color:#fff}
     <div class="hero-inner">
       <div class="hero-badge">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="5"/></svg>
-        Production Recovery Infrastructure
+        Now Enrolling: 2 Pilot Practices, First Month Free
       </div>
-      <h1>Recover Lost <em>High-Ticket Production</em> From <strong>Warm Leads</strong> You Already Paid For</h1>
-      <p class="hero-sub">Convert implant, cosmetic, Invisalign, and restorative inquiries into confirmed appointments — before competitors do. HIPAA-safe. TCPA-compliant.</p>
+      <h1>Your Ads Already Bring In <em>High-Ticket Leads</em>. We Follow Up Until They <strong>Book</strong>.</h1>
+      <p class="hero-sub">When an implant, Invisalign, or cosmetic inquiry comes in from your own ads or website, we contact it within minutes and follow up until the patient books. You pay per confirmed appointment. We're a new service, so our first two practices get the first month free while we document our first case studies.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Book Your Discovery Call →</a>
-        <a href="#proof" class="btn-ghost">See the Results</a>
+        <a href="#contact" class="btn-primary">Apply for a Pilot Slot →</a>
+        <a href="#proof" class="btn-ghost">How the Pilot Works</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
-          <span class="hero-stat-num">$432K</span>
-          <div class="hero-stat-label">Annual recovered production (case study)</div>
+          <span class="hero-stat-num">2</span>
+          <div class="hero-stat-label">Pilot slots, first month free</div>
         </div>
         <div class="hero-stat">
-          <span class="hero-stat-num">2 hrs</span>
-          <div class="hero-stat-label">Average first response time</div>
+          <span class="hero-stat-num">Minutes</span>
+          <div class="hero-stat-label">To first contact on every new inquiry</div>
         </div>
         <div class="hero-stat">
-          <span class="hero-stat-num">62%</span>
-          <div class="hero-stat-label">Post-implementation booking rate</div>
+          <span class="hero-stat-num">Per booking</span>
+          <div class="hero-stat-label">Flat fee, confirmed appointments only</div>
         </div>
         <div class="hero-stat">
-          <span class="hero-stat-num">100%</span>
-          <div class="hero-stat-label">HIPAA &amp; TCPA compliant</div>
+          <span class="hero-stat-num">BAA</span>
+          <div class="hero-stat-label">Signed before we touch any patient data</div>
         </div>
       </div>
     </div>
@@ -530,12 +367,11 @@ footer a:hover{color:#fff}
         <h3>Who We Partner With</h3>
       </div>
       <ul>
-        <li>Established general practices (typically 3–10 operatories)</li>
-        <li>Clinics offering implants, Invisalign, cosmetic, veneers, and complex restorative</li>
-        <li>$1M–$5M annual production</li>
-        <li>Existing lead flow with follow-up bottlenecks</li>
-        <li>Doctors focused on production growth, not just hygiene volume</li>
-        <li>High-ticket services drive meaningful revenue</li>
+        <li>Independent, owner-operated practices (1–3 locations)</li>
+        <li>Clinics offering implants, Invisalign, cosmetic, veneers, or complex restorative</li>
+        <li>Already running Google or Meta ads, or capturing inquiries through your website</li>
+        <li>A front desk stretched too thin to chase every new inquiry</li>
+        <li>Owners who want marketing spend to show up as booked chair time</li>
       </ul>
     </div>
     <div class="icp-col bad reveal" style="transition-delay:.12s">
@@ -544,11 +380,11 @@ footer a:hover{color:#fff}
         <h3>Not A Fit</h3>
       </div>
       <ul>
-        <li>Hygiene-only or Medicaid-heavy practices</li>
-        <li>Startups under 2 operatories</li>
-        <li>Clinics without high-ticket service focus</li>
-        <li>Practices not actively generating warm leads</li>
-        <li>General dentistry without production recovery goals</li>
+        <li>DSOs, franchises, and corporate dental groups</li>
+        <li>Clinics without a high-ticket service focus</li>
+        <li>Practices with no ads and no inbound inquiries to follow up on</li>
+        <li>Practices outside the US</li>
+        <li>Anyone looking for lead generation (we convert the inquiries you already get)</li>
       </ul>
     </div>
   </div>
@@ -559,9 +395,9 @@ footer a:hover{color:#fff}
 <div class="math-wrap">
 <div class="container">
   <div class="math-box reveal">
-    <h3>The Revenue Leakage Problem</h3>
+    <h3>Run the Numbers on Your Own Practice</h3>
     <p class="math-text">
-      If your practice generates <span class="math-highlight">20 warm high-ticket inquiries monthly</span> and converts only 30%, that's <span class="math-highlight">14 warm leads going cold every month</span>. If just 3 of those were $6,000 cases, that's <span class="math-highlight">$18,000 in lost monthly production</span> — over <span class="math-highlight">$200,000 annually</span> in recoverable revenue you already paid to generate.
+      Say your ads bring in <span class="math-highlight">20 high-ticket inquiries a month</span> and 6 of them book. The other 14 went somewhere. If even <span class="math-highlight">3 of those were $6,000 cases</span>, the slow follow-up cost more that month than the ads did. You already paid for those inquiries. The only question is who reaches them first.
     </p>
   </div>
 </div>
@@ -577,17 +413,17 @@ footer a:hover{color:#fff}
     <div class="problem-card reveal">
       <div class="problem-icon">🚪</div>
       <h3>The Front Desk Bottleneck</h3>
-      <p>Your team answers phones, checks in patients, handles insurance — high-value consultations fall through the cracks while they're putting out fires. Warm leads don't wait.</p>
+      <p>Your team answers phones, checks in patients, handles insurance. High-value consultations fall through the cracks while they're putting out fires. Warm leads don't wait.</p>
     </div>
     <div class="problem-card reveal" style="transition-delay:.1s">
       <div class="problem-icon">🪑</div>
       <h3>Unfilled High-Ticket Chair Time</h3>
-      <p>An unfilled $5,000–$25,000 slot isn't just empty space — it's lost production you'll never recover. Competitors with structured follow-up convert those same leads.</p>
+      <p>An unfilled $5,000–$25,000 slot is lost production you'll never recover. Competitors with structured follow-up convert those same leads.</p>
     </div>
     <div class="problem-card reveal" style="transition-delay:.2s">
       <div class="problem-icon">⏱️</div>
       <h3>Response Time Determines Conversion</h3>
-      <p>Warm inquiries receive delayed responses. By the time your team follows up 3 days later, they've already booked with the clinic that responded in 2 hours.</p>
+      <p>A patient researching implants usually contacts more than one practice the same day. Whichever office responds first, while the patient is still deciding, usually wins the appointment.</p>
     </div>
   </div>
 </div>
@@ -596,31 +432,31 @@ footer a:hover{color:#fff}
 <!-- PROOF -->
 <section class="proof-section" id="proof">
 <div class="container">
-  <div class="section-label reveal">Results</div>
-  <h2 class="section-title reveal">The Data Behind Warm Lead Conversion</h2>
-  <p class="section-sub reveal">Based on industry benchmarks for practices implementing systematic warm lead follow-up across high-ticket dental services.</p>
+  <div class="section-label reveal">The Pilot</div>
+  <h2 class="section-title reveal">First Month Free for Our First Two Practices</h2>
+  <p class="section-sub reveal">AppointBridge is new. You won't find testimonials or case studies here yet, because we refuse to invent them. Instead, we're earning our first ones in the open.</p>
   <div class="case-study reveal">
     <div class="case-label">
       <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
-      Industry Benchmark Model
+      Pilot Program
     </div>
-    <h3>6-Operatory High-Ticket Dental Practice</h3>
+    <h3>How the pilot works</h3>
     <div class="stat-grid">
       <div class="stat-box">
-        <span class="stat-num">32</span>
-        <div class="stat-label">Monthly warm high-ticket leads</div>
+        <span class="stat-num">2</span>
+        <div class="stat-label">Practices accepted into the pilot</div>
       </div>
       <div class="stat-box">
-        <span class="stat-num">38%</span>
-        <div class="stat-label">Pre-implementation booking rate</div>
+        <span class="stat-num">30</span>
+        <div class="stat-label">Days of full service at no charge</div>
       </div>
       <div class="stat-box">
-        <span class="stat-num">62%</span>
-        <div class="stat-label">Post-implementation booking rate</div>
+        <span class="stat-num">0</span>
+        <div class="stat-label">Obligation to continue afterward</div>
       </div>
     </div>
     <div class="result-box">
-      <strong>Result:</strong> 8 additional confirmed high-ticket appointments monthly. At an average case value of $4,500 across implant, cosmetic, and restorative services, that's $36,000 in recovered monthly production — <strong>$432,000 annually</strong> — from warm leads already entering their system.
+      <strong>The deal:</strong> AppointBridge is founder-run, built by someone with a healthcare background who wants real numbers before making claims. Two practices get the full service free for 30 days. We document response times, contact rates, and confirmed bookings from day one, and you see every number weekly. If the results satisfy you, we ask for a short written case study in return and you continue at standard per-booking pricing. If they don't, you walk away owing nothing.
     </div>
   </div>
 </div>
@@ -631,7 +467,7 @@ footer a:hover{color:#fff}
 <div class="container">
   <div class="section-label reveal">Why AppointBridge</div>
   <h2 class="section-title reveal">Not a Marketing Agency. Not a Call Center.</h2>
-  <p class="section-sub reveal">Structured infrastructure for high-ticket conversion — built specifically for dental economics.</p>
+  <p class="section-sub reveal">Structured infrastructure for high-ticket conversion, built for dental economics.</p>
   <div class="auth-grid">
     <div class="auth-card reveal">
       <div class="auth-card-num">01</div>
@@ -641,7 +477,7 @@ footer a:hover{color:#fff}
     <div class="auth-card reveal" style="transition-delay:.1s">
       <div class="auth-card-num">02</div>
       <h3>Compliance as Infrastructure</h3>
-      <p>HIPAA-safe workflows aren't optional. TCPA-compliant SMS requires documented opt-ins. We built our systems for healthcare-adjacent businesses — not generic tools retrofitted for dentistry.</p>
+      <p>HIPAA-safe workflows aren't optional. TCPA-compliant SMS requires documented opt-ins. We built our systems for healthcare from the start, not as generic tools retrofitted for dentistry.</p>
     </div>
     <div class="auth-card reveal" style="transition-delay:.15s">
       <div class="auth-card-num">03</div>
@@ -650,8 +486,8 @@ footer a:hover{color:#fff}
     </div>
     <div class="auth-card reveal" style="transition-delay:.2s">
       <div class="auth-card-num">04</div>
-      <h3>Production-First Metrics</h3>
-      <p>We track confirmed bookings by service type and production value, not just appointment volume. Every metric ties directly to your chair utilization and revenue goals.</p>
+      <h3>Founder-Run, Healthcare Background</h3>
+      <p>You work directly with the founder, who comes from a healthcare background and built the follow-up system before signing the first client. We track confirmed bookings by service type and production value, and every number we report ties to your chair time.</p>
     </div>
   </div>
 </div>
@@ -662,7 +498,7 @@ footer a:hover{color:#fff}
 <div class="container">
   <div class="section-label reveal">Process</div>
   <h2 class="section-title reveal">How Production Recovery Works</h2>
-  <p class="section-sub reveal">A structured 4-week implementation for established practices ready to maximize yield.</p>
+  <p class="section-sub reveal">A structured setup, handled for you. Most of the work happens on our side.</p>
   <div class="steps-grid">
     <div class="step-card reveal">
       <div class="step-num">1</div>
@@ -677,12 +513,12 @@ footer a:hover{color:#fff}
     <div class="step-card reveal" style="transition-delay:.2s">
       <div class="step-num">3</div>
       <h3>Recovery Launch</h3>
-      <p>Immediate professional follow-up for warm high-ticket inquiries — implant, cosmetic, Invisalign, restorative — before they call competitors.</p>
+      <p>Every warm high-ticket inquiry (implant, cosmetic, Invisalign, restorative) gets contacted within minutes and followed up until the patient books or opts out.</p>
     </div>
     <div class="step-card reveal" style="transition-delay:.3s">
       <div class="step-num">4</div>
-      <h3>Optimize &amp; Scale</h3>
-      <p>Weekly performance reviews, conversion tracking, and system refinement to maximize your confirmed production value.</p>
+      <h3>Review &amp; Refine</h3>
+      <p>Weekly performance reviews, conversion tracking, and system refinement to grow your confirmed production value.</p>
     </div>
   </div>
 </div>
@@ -693,7 +529,7 @@ footer a:hover{color:#fff}
 <div class="container">
   <div class="section-label reveal">Investment</div>
   <h2 class="section-title reveal">Pricing Built Around Your Results</h2>
-  <p class="section-sub reveal">Most practices lose $30K–$80K annually from unrecovered warm leads. Our pricing is structured so you only pay meaningfully when we recover production for you.</p>
+  <p class="section-sub reveal">A monthly retainer covers the infrastructure. Beyond that, you pay a flat fee per confirmed appointment, so the meaningful cost only shows up when bookings do. Pilot practices get the first month free.</p>
 
   <div class="pricing-model">
     <div class="pricing-component reveal">
@@ -706,20 +542,20 @@ footer a:hover{color:#fff}
       <div class="pricing-icon-wrap">🛡️</div>
       <div class="pricing-component-name">Monthly</div>
       <div class="pricing-component-title">Infrastructure Retainer</div>
-      <div class="pricing-component-desc">Covers ongoing compliance management, automation monitoring, lead routing, weekly reporting, and dedicated account management — active every day.</div>
+      <div class="pricing-component-desc">Covers ongoing compliance management, system monitoring, lead routing, weekly reporting, and direct access to the founder, active every day.</div>
     </div>
     <div class="pricing-component reveal" style="transition-delay:.2s">
       <div class="pricing-icon-wrap">📅</div>
       <div class="pricing-component-name">Performance</div>
       <div class="pricing-component-title">Per Confirmed Appointment</div>
-      <div class="pricing-component-desc">A flat fee per officially confirmed booking — not a percentage of case value. Only confirmed appointments are billed. Cancellations with 24+ hours notice are never charged.</div>
+      <div class="pricing-component-desc">A flat fee per officially confirmed booking, never a percentage of case value. Only confirmed appointments are billed. Cancellations with 24+ hours notice are never charged.</div>
     </div>
   </div>
 
   <div class="pricing-anchor reveal">
     <div class="pricing-anchor-label">Starting Investment</div>
     <div class="pricing-anchor-amount">$2,500 <span>/ month</span></div>
-    <div class="pricing-anchor-sub">Engagements start at $2,500/month plus a flat fee per confirmed appointment. Your tier and per-booking rate are determined on your discovery call based on your practice size and monthly lead volume.</div>
+    <div class="pricing-anchor-sub">Engagements start at $2,500/month plus a flat fee per confirmed appointment. Your tier and per-booking rate are agreed in writing before you sign, based on your monthly lead volume. The first two pilot practices skip the first month's retainer entirely.</div>
     <a href="#contact" class="btn-gold">See If Your Practice Qualifies →</a>
   </div>
 
@@ -730,7 +566,7 @@ footer a:hover{color:#fff}
       </div>
       <div class="transparency-text">
         <strong>No percentage fees</strong>
-        <span>Fixed per-booking rate regardless of case value — whether a $5K implant or $25K full-mouth restoration.</span>
+        <span>Fixed per-booking rate regardless of case value, whether a $5K implant or $25K full-mouth restoration.</span>
       </div>
     </div>
     <div class="transparency-item reveal" style="transition-delay:.1s">
@@ -748,7 +584,7 @@ footer a:hover{color:#fff}
       </div>
       <div class="transparency-text">
         <strong>90-day minimum</strong>
-        <span>Structured onboarding and workflow optimization takes time to compound. We require 90 days to show real results.</span>
+        <span>Standard engagements run 90 days, because follow-up results take time to show. Pilot practices decide after their free month.</span>
       </div>
     </div>
     <div class="transparency-item reveal" style="transition-delay:.2s">
@@ -769,7 +605,7 @@ footer a:hover{color:#fff}
 <div class="container">
   <div class="section-label reveal">Compliance</div>
   <h2 class="section-title reveal">Built for Healthcare. Not Marketing Fluff.</h2>
-  <p class="section-sub reveal">HIPAA-safe systems. Documented opt-ins. Structured workflows. Your compliance risk is eliminated before we touch a single lead.</p>
+  <p class="section-sub reveal">HIPAA-safe systems. Documented opt-ins. Structured workflows. We sign a BAA before touching a single lead, and every message respects TCPA timing rules.</p>
   <div class="badges-row">
     <div class="badge-item reveal">
       <div class="badge-icon">🔒</div>
@@ -799,8 +635,8 @@ footer a:hover{color:#fff}
 <section class="contact-section" id="contact">
 <div class="container">
   <div class="section-label reveal">Get Started</div>
-  <h2 class="section-title reveal">Ready to Recover Lost Production?</h2>
-  <p class="section-sub reveal">Book your discovery call. We'll review your practice size, current lead flow, and build a custom recovery plan for your clinic.</p>
+  <h2 class="section-title reveal">Apply for a Pilot Slot</h2>
+  <p class="section-sub reveal">Tell us about your practice below. Everything happens in writing over email. No sales call, no pressure. You'll hear back within one business day.</p>
   <div class="contact-card reveal">
     <form id="intakeForm">
       <div class="form-row">
@@ -822,6 +658,7 @@ footer a:hover{color:#fff}
           <label>Practice Size *</label>
           <select name="practice_size" required>
             <option value="" disabled selected>Select operatory count</option>
+            <option value="1-2">1–2 operatories</option>
             <option value="3-5">3–5 operatories</option>
             <option value="6-8">6–8 operatories</option>
             <option value="9-10">9–10 operatories</option>
@@ -835,7 +672,7 @@ footer a:hover{color:#fff}
       </div>
       <button type="submit" class="form-submit" id="submitBtn">Submit Inquiry →</button>
       <div class="success-msg" id="successMsg">
-        ✓ Inquiry received — we'll be in touch within 1 business day.
+        ✓ Inquiry received. We'll be in touch within 1 business day.
       </div>
     </form>
   </div>
@@ -847,7 +684,7 @@ footer a:hover{color:#fff}
   <div class="footer-inner">
     <div class="footer-logo">Appoint<span>Bridge</span> Systems</div>
     <p>© 2026 AppointBridge Systems. All rights reserved.</p>
-    <p>Production recovery infrastructure for established dental practices.</p>
+    <p>Production recovery infrastructure for independent dental practices.</p>
   </div>
 </div>
 </footer>
