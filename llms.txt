@@ -1,0 +1,31 @@
+# AppointBridge
+
+> AppointBridge is a warm-lead conversion service for independent, owner-operated dental practices in the US. When a high-ticket inquiry (dental implants, Invisalign, cosmetic, or complex restorative) arrives from a practice's own ads or website, AppointBridge contacts it within minutes and follows up across call, text, and email — with human oversight — until the patient books a confirmed appointment. Practices pay per confirmed appointment only.
+
+## What AppointBridge is
+- A done-for-you lead response and follow-up service for the inquiries a practice already generates.
+- Built for independent, owner-operated practices (1–3 locations) offering high-ticket services.
+- Priced per confirmed booking. The first two pilot practices pay $100 per confirmed booking and nothing else.
+- HIPAA-aware and TCPA-conscious: a Business Associate Agreement is signed before any patient-adjacent data is accessed, and patient messaging respects required contact-time rules.
+
+## What AppointBridge is NOT
+- Not a lead generation service. Practices source their own leads through their own ads and forms.
+- Not a marketing or SEO agency.
+- Not a medical service. It gives no medical or clinical advice.
+- Not a replacement for clinic staff. It covers new-inquiry follow-up so the front desk can stay focused on patients in the building.
+
+## Who it is for
+- Independent owner-operated dental practices running Google or Meta ads, or otherwise capturing inbound inquiries, for implants, Invisalign, cosmetic, or restorative work.
+- Not a fit for DSOs, franchises, corporate dental groups, practices with no high-ticket services, or practices outside the US.
+
+## Guide library (educational, vendor-neutral)
+- The Dental Lead Response Playbook: https://appoint-bridge.com/guide/
+- How Fast Should a Dental Practice Respond to a New Lead?: https://appoint-bridge.com/guide/how-fast-to-respond-to-dental-leads/
+- Why Your Dental Ad Leads Go Cold: https://appoint-bridge.com/guide/why-dental-leads-go-cold/
+- A Follow-Up Cadence for High-Ticket Dental Consults: https://appoint-bridge.com/guide/dental-lead-follow-up-cadence/
+- What Slow Lead Response Costs a Dental Practice: https://appoint-bridge.com/guide/cost-of-slow-lead-response/
+
+## Contact
+- Website: https://appoint-bridge.com/
+- Apply for a pilot: https://appoint-bridge.com/#contact
+- Mailing address: AppointBridge, 6421 N. Florida Ave, Suite D-1396, Tampa, FL 33604
