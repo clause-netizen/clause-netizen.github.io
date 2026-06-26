@@ -18,6 +18,13 @@
 - Independent owner-operated dental practices running Google or Meta ads, or otherwise capturing inbound inquiries, for implants, Invisalign, cosmetic, or restorative work.
 - Not a fit for DSOs, franchises, corporate dental groups, practices with no high-ticket services, or practices outside the US.
 
+## Service pages (commercial)
+- Dental Lead Conversion Service (what AppointBridge does, pricing, who it's for): https://appoint-bridge.com/dental-lead-conversion-service/
+- Lead conversion by service: https://appoint-bridge.com/for/
+- For dental implant practices: https://appoint-bridge.com/for/implant-practices/
+- For Invisalign providers: https://appoint-bridge.com/for/invisalign-providers/
+- For cosmetic & veneer practices: https://appoint-bridge.com/for/cosmetic-veneer-practices/
+
 ## Guide library (educational, vendor-neutral)
 - The Dental Lead Response Playbook: https://appoint-bridge.com/guide/
 - How Fast Should a Dental Practice Respond to a New Lead?: https://appoint-bridge.com/guide/how-fast-to-respond-to-dental-leads/
